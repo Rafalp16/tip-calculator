@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Tip calculator</title>
         <link rel="stylesheet" href="normalize.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css"> 
     </head>
     <body>
         <div class="site-container">
@@ -16,30 +16,36 @@
                 <h1 class="site-header__title">Tip calculator</h1>
             </header>    
             <main>
-                <form class="main__form">
+                <form class="main__form" name="form-tip">
                     <label for="bill-price" class="form__label">How much was your bill?</label>
                     <input type="text" id="bill-price" class="form__input">
 
                     <label for="bill-rating" class="form__label">How was your service?</label>
                     <select id="bill-rating" class="form__input form__select">
-                    <option value="Choose an option" disabled selected>Choose an option</option>
-                    <option value="30% - Outstanding">30% - Outstanding</option>
-                    <option value="20% - Good">20% - Good</option>
-                    <option value="15% - It was OK">15% - It was OK</option>
-                    <option value="10% - Bad">10% - Bad</option>
-                    <option value="5% - Terrible">5% - Terrible</option>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="0.3">30% - Outstanding</option>
+                    <option value="0.2">20% - Good</option>
+                    <option value="0.15">15% - It was OK</option>
+                    <option value="0.1">10% - Bad</option>
+                    <option value="0.05">5% - Terrible</option>
                     </select>
 
                     <label for="bill-people" class="form__label">How many people are sharing the bill?</label>
                     <input type="text" id="bill-people" class="form__input">
 
-                    <button class="form__submit">Calculate!</button>
+                    <button class="form__submit" type="button" onclick="calculateTip()">Calculate!</button>
                 </form>
-                <div class="main__answer"></div>
+                <div class="main__answer-box">
+                    <div id="answer-box__text"></div>
+                    <span id="answer-box__tip" class="answer-box__tip"></span>
+                    <span id="answer-box__text2"></span>
+                    <span id="answer-box__text3"></span>
+                </div>
             </main>
             <footer>
             
             </footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
