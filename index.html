@@ -16,7 +16,7 @@
                 <h1 class="site-header__title">Tip calculator</h1>
             </header>    
             <main>
-                <form class="main__form" name="form-tip">
+                <form class="main__form" name="form-tip" id="form-tip">
                     <label for="bill-price" class="form__label">How much was your bill?</label>
                     <input type="text" id="bill-price" class="form__input">
 
@@ -33,7 +33,7 @@
                     <label for="bill-people" class="form__label">How many people are sharing the bill?</label>
                     <input type="text" id="bill-people" class="form__input">
 
-                    <button class="form__submit" type="button" onclick="calculateTip()">Calculate!</button>
+                    <input class="form__submit" type="submit" value="Calculate!">
                 </form>
                 <div class="main__answer-box">
                     <div id="answer-box__text"></div>

@@ -15,9 +15,11 @@ body {
 }
 
 .site-container {
+    position: relative;
+    top: 5em;
     width: 80%;
     max-width: 25em;
-    margin: 5em auto;
+    margin: 0 auto;
     background-image: url(img/paper-pattern.jpg);
     box-shadow: 5px 5px 40px 5px #000;
 }
