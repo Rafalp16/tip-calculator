@@ -1,14 +1,14 @@
 document.getElementById('form-tip').addEventListener("submit",
     function(event) {
         event.preventDefault();
-        const price = parseInt(document.getElementById('bill-price').value);
-        const rating = document.getElementById('bill-rating').value;
-        const people = parseInt(document.getElementById('bill-people').value);
+        const price = parseFloat(document.getElementById('bill-price').value);
+        const rating = parseFloat(document.getElementById('bill-rating').value);
+        const people = parseInt(document.getElementById('bill-people').value, 10);
     
         if(isNaN(price) || price <= 0) {
             alert("Wrong bill value");
             return;
-        }else if(rating === "") {
+        }else if(rating === "" || isNaN(rating)) {
             alert("Pick service rating!");
             return;
         }else if(isNaN(people) || !Number.isInteger(people) || people <= 0) {
@@ -21,10 +21,8 @@ document.getElementById('form-tip').addEventListener("submit",
             tip = tip.toFixed(2);
             document.getElementById('answer-box__tip').innerHTML = tip;
             document.getElementById('answer-box__text2').innerHTML = "$";
-            if(people > 1) {
-                document.getElementById('answer-box__text3').innerHTML = "Each";   
-            }else {
-                document.getElementById('answer-box__text3').innerHTML = "";   
-            }
+            
+            people > 1 ? 
+                document.getElementById('answer-box__text3').innerHTML = "Each" : document.getElementById('answer-box__text3').innerHTML = "";
         }       
 })

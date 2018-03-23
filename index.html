@@ -18,7 +18,7 @@
             <main>
                 <form class="main__form" name="form-tip" id="form-tip">
                     <label for="bill-price" class="form__label">How much was your bill?</label>
-                    <input type="text" id="bill-price" class="form__input">
+                    <input type="number" step="0.01" id="bill-price" class="form__input">
 
                     <label for="bill-rating" class="form__label">How was your service?</label>
                     <select id="bill-rating" class="form__input form__select">
@@ -31,7 +31,7 @@
                     </select>
 
                     <label for="bill-people" class="form__label">How many people are sharing the bill?</label>
-                    <input type="text" id="bill-people" class="form__input">
+                    <input type="number" id="bill-people" class="form__input">
 
                     <input class="form__submit" type="submit" value="Calculate!">
                 </form>
