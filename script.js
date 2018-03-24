@@ -22,7 +22,6 @@ document.getElementById('form-tip').addEventListener("submit",
             document.getElementById('answer-box__tip').innerHTML = tip;
             document.getElementById('answer-box__text2').innerHTML = "$";
             
-            people > 1 ? 
-                document.getElementById('answer-box__text3').innerHTML = "Each" : document.getElementById('answer-box__text3').innerHTML = "";
+            document.getElementById('answer-box__text3').innerHTML = people > 1 ? "Each" : "";
         }       
 })
